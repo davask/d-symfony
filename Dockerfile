@@ -8,11 +8,10 @@ ENV DEBIAN_FRONTEND noninteractive
 
 RUN apt-get update
 
-RUN apt-get install -y acl
-RUN apt-get install -y git
-RUN apt-get install -y php-apc
-
-RUN apt-get install -y sendmail
+RUN apt-get install -y acl \
+php-apc \
+git \
+sendmail
 
 RUN rm -rf /var/lib/apt/lists/*
 
