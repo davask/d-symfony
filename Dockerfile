@@ -3,6 +3,8 @@ MAINTAINER davask <contact@davaskweblimited.com>
 
 LABEL dwl.app.framework="symfony2"
 
+USER symfony2
+
 # disable interactive functions
 ENV DEBIAN_FRONTEND noninteractive
 

@@ -14,3 +14,10 @@ setfacl -R -m u:"$HTTPDUSER":rwX -m u:`whoami`:rwX app/cache app/logs web
 setfacl -dR -m u:"$HTTPDUSER":rwX -m u:`whoami`:rwX app/cache app/logs web
 
 echo "Symfony Initialized";
+
+php app/console doctrine:database:create
+php app/console doctrine:phpcr:init:dbal
+php app/console doctrine:phpcr:repository:init
+php app/console doctrine:phpcr:fixtures:load
+
+echo "Database Initialized";
