@@ -17,4 +17,4 @@ RUN mv composer.phar /usr/local/bin/composer;
 # Copy instantiation specific file
 COPY ./symfony.sh $DWL_INIT_DIR/$DWL_INIT_COUNT-symfony.sh
 # update counter for next container
-RUN DWL_INIT_COUNT=$(($DWL_INIT_COUNT+1))
+ENV DWL_INIT_COUNT $(($DWL_INIT_COUNT+1))
