@@ -20,9 +20,7 @@ if [ -d bin ]; then
     SF2CONSOLE="bin"
 fi
 
+php ${SF2CONSOLE}/console doctrine:database:drop
 php ${SF2CONSOLE}/console doctrine:database:create
-php ${SF2CONSOLE}/console doctrine:phpcr:init:dbal
-php ${SF2CONSOLE}/console doctrine:phpcr:repository:init
-php ${SF2CONSOLE}/console doctrine:phpcr:fixtures:load
 
 echo "Database Initialized";
