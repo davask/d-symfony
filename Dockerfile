@@ -4,7 +4,7 @@ MAINTAINER davask <contact@davaskweblimited.com>
 LABEL dwl.app.framework="symfony2"
 
 RUN apt-get update
-RUN apt-get install -y acl \
+RUN apt-get install -y acl
 RUN apt-get install -y php-apc
 RUN apt-get install -y git
 RUN rm -rf /var/lib/apt/lists/*
