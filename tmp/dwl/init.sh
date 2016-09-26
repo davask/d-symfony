@@ -12,9 +12,6 @@ echo ">> dwl conf activated";
 . /tmp/dwl/apache2.sh
 echo ">> apache2 initialized";
 
-. /tmp/dwl/mysql.sh
-echo ">> mysql setup";
-
 . /tmp/dwl/sendmail.sh
 echo ">> sendmail initialized";
 

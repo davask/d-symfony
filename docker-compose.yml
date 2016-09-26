@@ -11,7 +11,7 @@ d-symfony:
     io.rancher.scheduler.affinity:host_label: dwl=dwlComPrivate
   tty: true
   hostname: symfony.davaskweblimited.com
-  image: davask/d-symfony:2-m5.6-p5.6-a2.4-u14.04
+  image: davask/d-symfony:2-p5.5-a2.4-u14.04
   volumes:
   - /home/dwl/projects/factory/docker-dev/files:/home/dwl/files
   - /home/dwl/projects/factory/docker-dev/sites-available:/etc/apache2/sites-available
