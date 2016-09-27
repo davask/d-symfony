@@ -12,13 +12,13 @@ echo ">> dwl conf activated";
 . /tmp/dwl/php.sh
 echo ">> php initialized";
 
+. /tmp/dwl/symfony.sh
+echo ">> symfony setup";
+
 . /tmp/dwl/apache2.sh
 echo ">> apache2 initialized";
 
 . /tmp/dwl/sendmail.sh
 echo ">> sendmail initialized";
-
-. /tmp/dwl/symfony.sh
-echo ">> symfony setup";
 
 . /tmp/dwl/keeprunning.sh
