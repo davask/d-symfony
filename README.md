@@ -34,32 +34,35 @@ To avoid issues you can use one of these following solutions (only the default h
 
 app\config\config.yml
 
+default php handler
+
 ```yml
 
 framework:
     framework:
         session:
-            # default php handler
             handler_id:  ~
 
 ```
 
+[memcached handler](https://github.com/symfony/symfony/issues/17845#issuecomment-195285004)
+
 ```yml
 
 framework:
     framework:
         session:
-            # https://github.com/symfony/symfony/issues/17845#issuecomment-195285004
             # handler_id:  session.handler.memcached
 
 ```
 
+[PDO Handler](http://symfony.com/doc/current/doctrine/pdo_session_storage.html)
+
 ```yml
 
 framework:
     framework:
         session:
-            # http://symfony.com/doc/current/doctrine/pdo_session_storage.html
             # handler_id: session.handler.pdo
 
 ```
