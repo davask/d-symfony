@@ -1,5 +1,6 @@
 #! /bin/bash
 
+. /tmp/dwl/envvar.sh
 . /tmp/dwl/user.sh
 . /tmp/dwl/ssh.sh
 echo ">> Ubuntu initialized";
@@ -11,6 +12,9 @@ echo ">> dwl conf activated";
 
 . /tmp/dwl/php.sh
 echo ">> php initialized";
+
+. /tmp/dwl/source.sh
+echo ">> source copied";
 
 . /tmp/dwl/symfony.sh
 echo ">> symfony setup";
