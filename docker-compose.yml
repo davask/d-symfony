@@ -1,0 +1,18 @@
+d-symfony:
+  ports:
+  - 65507:22/tcp
+  - 65508:80/tcp
+  environment:
+    DWL_SSH_ACCESS: 'true'
+    DWL_USER_NAME: username
+    DWL_USER_PASSWD: secret
+    DWL_USER_ID: '1000'
+  labels:
+    io.rancher.scheduler.affinity:host_label: dwl=dwlComPrivate
+  tty: true
+  hostname: symfony.davaskweblimited.com
+  image: davask/d-symfony:2-p7.0-a2.4-u16.04
+  volumes:
+  - /path/to/files:/home/username/files
+  - /path/to/sites-available:/etc/apache2/sites-available
+  stdin_open: true
