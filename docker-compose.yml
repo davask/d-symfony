@@ -7,6 +7,7 @@ d-symfony:
     DWL_USER_NAME: username
     DWL_USER_PASSWD: secret
     DWL_USER_ID: '1000'
+    DWL_DATE_TIMEZONE: 'Europe/Paris'
   labels:
     io.rancher.scheduler.affinity:host_label: dwl=dwlComPrivate
   tty: true
