@@ -18,7 +18,7 @@ see [FROM IMAGE README.md](https://github.com/davask/d-php)
 
 The following session handler can generate issues.
 
-app\config\config.yml
+##### app\config\config.yml
 
 ```yml
 
@@ -32,7 +32,7 @@ framework:
 
 To avoid issues you can use one of these following solutions (only the default handler have been tested)
 
-app\config\config.yml
+##### app\config\config.yml
 
 default php handler
 
