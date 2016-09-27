@@ -7,7 +7,7 @@ RUN /bin/bash -c 'chmod a+x /usr/local/bin/symfony'
 RUN /bin/bash -c 'symfony new symfony'
 RUN /bin/bash -c 'mv symfony /tmp/dwl'
 
-RUN /bin/bash -c 'echo "chown -R \$\{DWL_USER_NAME\}:\$\{DWL_USER_NAME\} /tmp/dwl/symfony.sh;" >> /tmp/dwl/permission.sh'
+RUN /bin/bash -c 'echo "chown -R \${DWLC_USER_NAME}:\${DWLC_USER_NAME} /tmp/dwl/symfony.sh;" >> /tmp/dwl/permission.sh'
 
 COPY ./tmp/dwl/source.sh /tmp/dwl/source.sh
 COPY ./tmp/dwl/symfony.sh /tmp/dwl/symfony.sh
