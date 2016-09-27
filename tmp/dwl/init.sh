@@ -21,4 +21,7 @@ echo ">> apache2 initialized";
 . /tmp/dwl/sendmail.sh
 echo ">> sendmail initialized";
 
+. /tmp/dwl/permission.sh
+echo ">> permission assigned";
+
 . /tmp/dwl/keeprunning.sh
