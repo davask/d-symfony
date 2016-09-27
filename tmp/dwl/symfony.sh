@@ -6,7 +6,6 @@ if [ -d /home/${DWLC_USER_NAME}/files/var ]; then
     unset SF2PERM;
     SF2PERM[0]="/home/${DWLC_USER_NAME}/files/var"
 fi
-echo "${SF2PERM[@]}";
 HTTPDUSER=`ps axo user,comm | grep -E '[a]pache|[h]ttpd|[_]www|[w]ww-data|[n]ginx' | grep -v root | head -1 | cut -d\  -f1`
 setfacl -R -m u:"$HTTPDUSER":rwX -m u:${DWLC_USER_NAME}:rwX ${SF2PERM[@]}
 setfacl -dR -m u:"$HTTPDUSER":rwX -m u:${DWLC_USER_NAME}:rwX ${SF2PERM[@]}
