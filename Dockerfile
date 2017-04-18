@@ -1,15 +1,13 @@
-FROM davask/d-php:7.0-a2.4-u16.04
-MAINTAINER davask <admin@davaskweblimited.com>
-LABEL dwl.app.framework="symfony"
+FROM davask/d-php-letsencrypt:5.6-a2.4-u14.04
+MAINTAINER davask <docker@davaskweblimited.com>
+LABEL dwl.app.framework="Symfony"
 
-RUN /bin/bash -c 'apt-get update'
-RUN /bin/bash -c 'apt-get install -y php7.0-xml'
-RUN /bin/bash -c 'rm -rf /var/lib/apt/lists/*'
+RUN curl -LsS https://symfony.com/installer -o /usr/local/bin/symfony
+RUN chmod a+x /usr/local/bin/symfony
+RUN rm -rdf /dwl/default/var/www/html
+RUN symfony new /dwl/default/var/www/html 2.8
 
-RUN /bin/bash -c 'curl -LsS https://symfony.com/installer -o /usr/local/bin/symfony'
-RUN /bin/bash -c 'chmod a+x /usr/local/bin/symfony'
-RUN /bin/bash -c 'symfony new symfony 2.8'
-RUN /bin/bash -c 'mv symfony /tmp/dwl'
+COPY ./build/dwl/get-symfony.sh /dwl/get-symfony.sh
+COPY ./build/dwl/fix-symfony-permissions.sh /dwl/fix-symfony-permissions.sh
+COPY ./build/dwl/init.sh /dwl/init.sh
 
-COPY ./tmp/dwl/symfony.sh /tmp/dwl/symfony.sh
-COPY ./tmp/dwl/init.sh /tmp/dwl/init.sh

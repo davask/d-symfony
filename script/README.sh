@@ -1,8 +1,19 @@
-# dockerfile
+#/usr/bin/env bash
+
+branch=${1};
+parentBranch=${2};
+rootDir=${3};
+buildDir=${4};
+
+#############
+# README.md #
+#############
+
+echo "# dockerfile
 
 see [FROM IMAGE README.md](https://github.com/davask/d-php-letsencrypt)
 
-### SYMFONY 2.8 activation
+### SYMFONY ${SYMFONY_VERSION} activation
 
 #### comment
 
@@ -12,5 +23,7 @@ see [FROM IMAGE README.md](https://github.com/davask/d-php-letsencrypt)
 
 ## LABEL
 
-> dwl.app.framework="symfony 2.8"
+> dwl.app.framework=\"symfony ${SYMFONY_VERSION}\"
+" > ${rootDir}/README.md
 
+echo "README.md generated with symfony:${branch}";

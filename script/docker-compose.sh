@@ -1,4 +1,15 @@
-d-symfony:
+#/usr/bin/env bash
+
+branch=${1};
+parentBranch=${2};
+rootDir=${3};
+buildDir=${4};
+
+######################
+# docker-compose.yml #
+######################
+
+echo "d-symfony:
   ports:
   - 65500:80/tcp
   - 65502:22/tcp
@@ -19,14 +30,16 @@ d-symfony:
     DWL_CERTBOT_EMAIL: docker@davaskweblimited.com
     DWL_CERTBOT_DEBUG: 'false'
     DWL_PHP_DATETIMEZONE: Europe/Paris
-  image: davask/d-symfony:2.8-p5.6-a2.4-u14.04
+  image: davask/d-symfony:${branch}
   hostname: localhost
   net: bridge
   volumes:
-  - /home/dwl/docker-images/app/d-symfony/build/etc/letsencrypt:/etc/letsencrypt
-  - /home/dwl/docker-images/app/d-symfony/build/etc/apache2/ssl:/etc/apache2/ssl
-  - /home/dwl/docker-images/app/d-symfony/volumes/log/localhost/apache2:/var/log/apache2
-  - /home/dwl/docker-images/app/d-symfony/volumes/home/username/http/app/sites-available:/etc/apache2/sites-available
-  - /home/dwl/docker-images/app/d-symfony/volumes/home/username/files:/home/username/files
+  - ${buildDir}/etc/letsencrypt:/etc/letsencrypt
+  - ${buildDir}/etc/apache2/ssl:/etc/apache2/ssl
+  - ${rootDir}/volumes/log/localhost/apache2:/var/log/apache2
+  - ${rootDir}/volumes/home/username/http/app/sites-available:/etc/apache2/sites-available
+  - ${rootDir}/volumes/home/username/files:/home/username/files
   working_dir: /var/www/html
+" > ${rootDir}/docker-compose.yml
 
+echo "docker-compose.yml generated with symfony:${branch}";
