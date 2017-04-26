@@ -40,7 +40,7 @@ echo "d-symfony:
   - ${rootDir}/volumes/home/username/http/app/sites-available:/etc/apache2/sites-available
   - ${rootDir}/volumes/home/username/files:/home/username/files
   working_dir: /var/www/html
-  mem_limit: 512
+  mem_limit: 512mb
 d-symfony-mysql:
   ports:
   - 65501:3306/tcp
