@@ -39,6 +39,7 @@ echo "d-symfony:
   - ${rootDir}/volumes/log/localhost/apache2:/var/log/apache2
   - ${rootDir}/volumes/home/username/http/app/sites-available:/etc/apache2/sites-available
   - ${rootDir}/volumes/home/username/files:/home/username/files
+  - ${rootDir}/volumes/home/username/.composer:/home/username/.composer
   working_dir: /var/www/html
   mem_limit: 512mb
 d-symfony-mysql:
