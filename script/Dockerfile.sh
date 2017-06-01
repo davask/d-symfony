@@ -11,6 +11,7 @@ buildDir=${4};
 
 echo "FROM davask/d-php-letsencrypt:${parentBranch}
 MAINTAINER davask <docker@davaskweblimited.com>
+USER root
 LABEL dwl.app.framework=\"Symfony\"" > ${rootDir}/Dockerfile
 echo "
 RUN php -r \"copy('https://getcomposer.org/installer', 'composer-setup.php');\"
