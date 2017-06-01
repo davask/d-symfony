@@ -1,5 +1,6 @@
-FROM davask/d-php-letsencrypt:5.6-a2.4-u14.04
+FROM davask/d-php-letsencrypt:5.6-a2.4-d8.8
 MAINTAINER davask <docker@davaskweblimited.com>
+USER root
 LABEL dwl.app.framework="Symfony"
 
 RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"

@@ -1,9 +1,9 @@
 [
   {
     "title": "Symfony  + TSL",
-    "description": "Symfony  + letsencrypt (optional)",
+    "description": "s + letsencrypt (optional)",
     "logo": "https://cdn.worldvectorlogo.com/logos/symfony.svg",
-    "image": "davask/d-symfony:2.8-p5.6-a2.4-u14.04",
+    "image": "davask/d-symfony:2.8-p5.6-a2.4-d8.8",
     "ports": [
         "22/tcp",
         "80/tcp",
@@ -64,7 +64,7 @@
         }
     ],
     "volumes": [
-        "/home/username",
+        "/home/admin",
         "/var/log/apache2",
         "/etc/apache2/sites-available",
         "/etc/apache2/ssl",
