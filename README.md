@@ -20,7 +20,15 @@ The following session handler can generate issues.
 
 ##### app\config\config.yml
 
+```yml
 
+framework:
+    framework:
+        session:
+            handler_id:  session.handler.native_file
+             save_path:   %kernel.root_dir%/../var/sessions/%kernel.environment%
+
+```
 
 To avoid issues you can use one of these following solutions (only the default handler have been tested)
 
@@ -28,15 +36,36 @@ To avoid issues you can use one of these following solutions (only the default h
 
 default php handler
 
+```yml
 
+framework:
+    framework:
+        session:
+            handler_id:  ~
+
+```
 
 [memcached handler](https://github.com/symfony/symfony/issues/17845#issuecomment-195285004)
 
+```yml
 
+framework:
+    framework:
+        session:
+            # handler_id:  session.handler.memcached
+
+```
 
 [PDO Handler](http://symfony.com/doc/current/doctrine/pdo_session_storage.html)
 
+```yml
 
+framework:
+    framework:
+        session:
+            # handler_id: session.handler.pdo
+
+```
 
 
 ## LABEL
