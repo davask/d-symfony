@@ -37,9 +37,11 @@ echo ">> Apache2 initialized";
 . ${dwlDir}/sendmail.sh
 echo ">> Sendmail initialized";
 
-. ${dwlDir}/get-symfony.sh
-. ${dwlDir}/symfony.sh
-. ${dwlDir}/fix-symfony-permissions.sh
+. ${dwlDir}/get-symfony-app.sh
+. ${dwlDir}/prepare-symfony-app.sh
 echo ">> Symfony initialized";
+
+. ${dwlDir}/fix-symfony-permissions.sh
+echo ">> fix Symfony initialized";
 
 . ${dwlDir}/keeprunning.sh
