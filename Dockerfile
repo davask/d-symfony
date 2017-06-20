@@ -12,4 +12,5 @@ COPY ./build/dwl/get-symfony-app.sh /dwl/get-symfony-app.sh
 COPY ./build/dwl/prepare-symfony-app.sh /dwl/prepare-symfony-app.sh
 COPY ./build/dwl/fix-symfony-permissions.sh /dwl/fix-symfony-permissions.sh
 COPY ./build/dwl/init.sh /dwl/init.sh
+USER admin
 
