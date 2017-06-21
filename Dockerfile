@@ -9,7 +9,7 @@ RUN curl -LsS https://symfony.com/installer -o /usr/local/bin/symfony; chmod a+x
 
 COPY ./build/dwl/default/home/admin/.composer /dwl/default/home/admin/.composer
 
-COPY ./build/dwl/php.sh ./build/dwl/get-composer-oauth.sh ./build/dwl/get-symfony-app.sh ./build/dwl/prepare-symfony-app.sh ./build/dwl/fix-symfony-permissions.sh ./build/dwl/init.sh
+COPY ./build/dwl/php.sh ./build/dwl/get-symfony-app.sh ./build/dwl/prepare-symfony-app.sh ./build/dwl/fix-symfony-permissions.sh ./build/dwl/init.sh
 /dwl/
 USER admin
 

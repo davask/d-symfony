@@ -28,7 +28,6 @@ symfony new /dwl/default/var/www/html ${SYMFONY_VERSION:-2.8};
 COPY ./build/dwl/default/home/admin/.composer /dwl/default/home/admin/.composer
 
 COPY ./build/dwl/php.sh \
-./build/dwl/get-composer-oauth.sh \
 ./build/dwl/get-symfony-app.sh \
 ./build/dwl/prepare-symfony-app.sh \
 ./build/dwl/fix-symfony-permissions.sh \
