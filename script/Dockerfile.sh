@@ -30,7 +30,7 @@ COPY ./build/dwl/php.sh \
 ./build/dwl/get-symfony-app.sh \
 ./build/dwl/prepare-symfony-app.sh \
 ./build/dwl/fix-symfony-permissions.sh \
-./build/dwl/init.sh
+./build/dwl/init.sh \
 /dwl/
 USER admin
 " >> ${rootDir}/Dockerfile
