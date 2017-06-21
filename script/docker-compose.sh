@@ -34,9 +34,9 @@ echo "d-symfony:
   hostname: localhost
   net: bridge
   volumes:
-  - ${buildDir}/etc/letsencrypt:/etc/letsencrypt
-  - ${buildDir}/etc/apache2/ssl:/etc/apache2/ssl
-  - ${rootDir}/volumes/log/localhost/apache2:/var/log/apache2
+  - ${rootDir}/volumes/etc/letsencrypt:/etc/letsencrypt
+  - ${rootDir}/volumes/etc/apache2/ssl:/etc/apache2/ssl
+  - ${rootDir}/volumes/var/log/localhost/apache2:/var/log/apache2
   - ${rootDir}/volumes/home/username/http/app/sites-available:/etc/apache2/sites-available
   - ${rootDir}/volumes/home/username/files:/home/username/files
   - ${rootDir}/volumes/home/username/.composer:/home/username/.composer
