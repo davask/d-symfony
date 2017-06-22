@@ -27,6 +27,7 @@ symfony new /dwl/default/var/www/symfony ${SYMFONY_VERSION:-2.8}; \
 mv /dwl/default/var/www/symfony /dwl/default/var/www/html
 
 COPY ./build/dwl/php.sh \
+./build/dwl/asdf.py \
 ./build/dwl/get-symfony-app.sh \
 ./build/dwl/prepare-symfony-app.sh \
 ./build/dwl/fix-symfony-permissions.sh \
