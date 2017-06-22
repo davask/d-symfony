@@ -24,7 +24,7 @@ RUN curl -LsS https://symfony.com/installer -o /usr/local/bin/symfony; \
 chmod a+x /usr/local/bin/symfony; \
 rm -rdf /dwl/default/var/www/html; \
 symfony new /dwl/default/var/www/symfony ${SYMFONY_VERSION:-2.8}; \
-mv /dwl/default/var/www/symfony /dwl/default/var/www/html
+cp -rdf /dwl/default/var/www/symfony /dwl/default/var/www/html
 
 COPY ./build/dwl/php.sh \
 ./build/dwl/asdf.py \
