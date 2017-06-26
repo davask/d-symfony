@@ -25,6 +25,7 @@ chmod a+x /usr/local/bin/symfony;
 
 COPY ./build/dwl/php.sh \
 ./build/dwl/asdf.py \
+./build/dwl/setup-symfony-app.sh \
 ./build/dwl/get-symfony-app.sh \
 ./build/dwl/prepare-symfony-app.sh \
 ./build/dwl/fix-symfony-permissions.sh \

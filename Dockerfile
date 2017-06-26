@@ -7,6 +7,6 @@ RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"; p
 
 RUN curl -LsS https://symfony.com/installer -o /usr/local/bin/symfony; chmod a+x /usr/local/bin/symfony;
 
-COPY ./build/dwl/php.sh ./build/dwl/asdf.py ./build/dwl/get-symfony-app.sh ./build/dwl/prepare-symfony-app.sh ./build/dwl/fix-symfony-permissions.sh ./build/dwl/init.sh /dwl/
+COPY ./build/dwl/php.sh ./build/dwl/asdf.py ./build/dwl/setup-symfony-app.sh ./build/dwl/get-symfony-app.sh ./build/dwl/prepare-symfony-app.sh ./build/dwl/fix-symfony-permissions.sh ./build/dwl/init.sh /dwl/
 USER admin
 
