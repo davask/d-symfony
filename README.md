@@ -1,45 +1,69 @@
 # dockerfile
 
-see [FROM IMAGE README.md](https://github.com/davask/d-php-letsencrypt)
+## Exposed port
 
-### SYMFONY  2.8 activation
+- 22
+- 80
+- 443
+## Default ENV values
+
+- DWL_LOCAL_LANG: 'en_US:en'
+- DWL_LOCAL: 'en_US.UTF-8'
+- DWL_USER_NAME: 'username'
+- DWL_SSH_ACCESS: 'false'
+- DWL_USER_ID: '1000'
+- DWL_USER_PASSWD: 'secret'
+- APACHE_LOCK_DIR: '/var/lock/apache2'
+- APACHE_PID_FILE: '/var/run/apache2.pid'
+- APACHE_RUN_USER: 'www-data'
+- APACHE_RUN_GROUP: 'www-data'
+- APACHE_LOG_DIR: '/var/log/apache2'
+- APACHE_RUN_DIR: '/var/run/apache2'
+- DWL_HTTP_SERVERADMIN: 'admin@localhost'
+- DWL_HTTP_DOCUMENTROOT: '/var/www/html'
+- DWL_HTTP_SHIELD: 'false'
+- DWL_SSLKEY_C: 'EU'
+- DWL_SSLKEY_ST: 'France'
+- DWL_SSLKEY_L: 'Vannes'
+- DWL_SSLKEY_O: 'davask web limited - docker container'
+- DWL_SSLKEY_CN: 'davaskweblimited.com'
+- APACHE_SSL_DIR: '/etc/apache2/ssl'
+- DWL_CERTBOT_EMAIL: 'admin@localhost'
+- DWL_CERTBOT_DEBUG: 'true'
+- DWL_PHP_DATETIMEZONE: 'Europe/Paris'
+## Available volumes
+
+- /home/username
+- /var/log/apache2
+- /etc/apache2/sites-available
+- /etc/apache2/ssl
+- /etc/letsencrypt
+## LABEL
+
+- dwl.server.os="php-letsencrypt 2.8-p5.6-a2.4-u14.04"
+
+- dwl.server.base="symfony 2.8-p5.6-a2.4-u14.04"
+
+- dwl.server.http="apache 2.8-p5.6-a2.4-u14.04"
+
+## EXTRA
 
 #### comment
 
-[handler_id](http://symfony.com/doc/current/reference/configuration/framework.html#handler-id)
+- automatic configuration are handle for filename as [0-9]{4}\-subdomain\.domain\.tld\-[0-9]{2,3}\.conf\.dwl
+- On start all *.conf in /etc/apache2/sites-available are enabled
 
-> type: string default: 'session.handler.native_file'
+## virtualhost automatic conf
 
-> The service id used for session storage. The session.handler service alias will be set to this service id.
+```bash
 
-> You can also set it to null, to default to the handler of your PHP installation.
+# ServerAdmin
+# DocumentRoot
+# ServerName
+# ServerAlias
 
-> You can see an example of the usage of this in How to Use PdoSessionHandler to Store Sessions in the Database.
-
-The following session handler can generate issues.
-
-##### app\config\config.yml
-
-
-
-To avoid issues you can use one of these following solutions (only the default handler have been tested)
-
-##### app\config\config.yml
-
-default php handler
+```
 
 
-
-[memcached handler](https://github.com/symfony/symfony/issues/17845#issuecomment-195285004)
-
-
-
-[PDO Handler](http://symfony.com/doc/current/doctrine/pdo_session_storage.html)
-
-
-
-
-## LABEL
-
-> dwl.app.framework="symfony 2.8"
-
+- [test certificat](# https://www.ssllabs.com/ssltest/analyze.html?d=<sub.domain.tld>&latest
+)

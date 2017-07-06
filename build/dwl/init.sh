@@ -1,11 +1,13 @@
-#! /bin/bash
+#! /bin/sh -e
+
+cd .; cd -;
 
 dwlDir="/dwl";
 
 . ${dwlDir}/envvar.sh
 . ${dwlDir}/user.sh
 . ${dwlDir}/ssh.sh
-echo ">> Ubuntu initialized";
+echo ">> Os initialized";
 
 echo ">> Base initialized";
 
@@ -34,12 +36,5 @@ echo ">> TSL initialized";
 echo ">> Apache2 initialized";
 
 . ${dwlDir}/php.sh
-. ${dwlDir}/sendmail.sh
-echo ">> Sendmail initialized";
+echo ">> Php initialized";
 
-. ${dwlDir}/get-symfony.sh
-. ${dwlDir}/symfony.sh
-. ${dwlDir}/fix-symfony-permissions.sh
-echo ">> Symfony initialized";
-
-. ${dwlDir}/keeprunning.sh
