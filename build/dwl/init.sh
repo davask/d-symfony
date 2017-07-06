@@ -1,4 +1,6 @@
-#! /bin/bash
+#! /bin/sh -e
+
+cd .; cd -;
 
 dwlDir="/dwl";
 
@@ -34,14 +36,5 @@ echo ">> TSL initialized";
 echo ">> Apache2 initialized";
 
 . ${dwlDir}/php.sh
-. ${dwlDir}/sendmail.sh
-echo ">> Sendmail initialized";
+echo ">> Php initialized";
 
-. ${dwlDir}/get-symfony-app.sh
-. ${dwlDir}/prepare-symfony-app.sh
-echo ">> Symfony initialized";
-
-. ${dwlDir}/fix-symfony-permissions.sh
-echo ">> fix Symfony initialized";
-
-. ${dwlDir}/keeprunning.sh
