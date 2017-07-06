@@ -3,7 +3,7 @@
     "title": "Symfony 2.8 + TSL",
     "description": "s2.8 + letsencrypt (optional)",
     "logo": "https://cdn.worldvectorlogo.com/logos/symfony.svg",
-    "image": "davask/d-symfony:2.8-p5.6-a2.4-u14.04",
+    "image": "davask/d-symfony:2.8-p5.6-a2.4-u16.04",
     "ports": [
         "22/tcp",
         "80/tcp",
