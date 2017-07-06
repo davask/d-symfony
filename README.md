@@ -40,11 +40,11 @@
 - /etc/letsencrypt
 ## LABEL
 
-- dwl.server.os="php-letsencrypt 2.8-p7.0-a2.4-d8.8"
+- dwl.server.os="php-letsencrypt 2.8-p7.0-a2.4-u16.04"
 
-- dwl.server.base="symfony 2.8-p7.0-a2.4-d8.8"
+- dwl.server.base="symfony 2.8-p7.0-a2.4-u16.04"
 
-- dwl.server.http="apache 2.8-p7.0-a2.4-d8.8"
+- dwl.server.http="apache 2.8-p7.0-a2.4-u16.04"
 
 ## EXTRA
 
