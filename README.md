@@ -35,6 +35,9 @@
 ## Available volumes
 
 - /home/host
+- /etc/apache2/sites-available
+- /etc/apache2/ssl
+- /etc/letsencrypt
 ## LABEL
 
 - dwl.server.os="php-letsencrypt 2.8-p7.0-a2.4-u16.04"
