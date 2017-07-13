@@ -21,7 +21,7 @@ COPY ./build/dwl/php.sh \
 ./build/dwl/init.sh \
 /dwl/
 
-# CMD ["/dwl/init.sh && service sendmail start && apachectl -k graceful && /bin/bash"]
+# CMD ["/dwl/init.sh && service sendmail start && apache2ctl -D FOREGROUND"]
 
 RUN chmod +x /dwl/init.sh && chown root:sudo -R /dwl
 USER admin
