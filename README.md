@@ -1,13 +1,13 @@
 # dockerfile
 
 [![[dwl] symfony:2.8-p5.6-a2.4-d8.8 in prod][badge-shields]](https://hub.docker.com/r/davask/d-symfony/)
-[![[dwl] symfony:2.8-p5.6-a2.4-d8.8 license][badge-fossa]](https://app.fossa.io/projects/git%2Bhttps%3A%2F%2Fgithub.com%2Fdavask%2Fd-symfony?ref=badge_shield)
+[![[dwl] symfony:2.8-p5.6-a2.4-d8.8 license][badge-license]](https://app.fossa.io/projects/git%2Bhttps%3A%2F%2Fgithub.com%2Fdavask%2Fd-symfony?ref=badge_shield)
 
 [![[dwl] symfony:2.8-p5.6-a2.4-d8.8 image][badge-docker]](https://hub.docker.com/r/davask/d-symfony/)
 
 [badge-docker]: https://dockeri.co/image/davask/d-symfony "[dwl] symfony:2.8-p5.6-a2.4-d8.8 image"
 [badge-shields]: https://img.shields.io/badge/davask%2Fd--symfony-env_prod-brightgreen.svg?style=flat "[dwl] symfony:2.8-p5.6-a2.4-d8.8 in prod"
-[badge-fossa]: https://img.shields.io/badge/davask%2Fd--symfony-license_MIT-brightgreen.svg?style=flat "[dwl] symfony:2.8-p5.6-a2.4-d8.8 license"
+[badge-license]: https://img.shields.io/badge/davask%2Fd--symfony-license_MIT-brightgreen.svg?style=flat "[dwl] symfony:2.8-p5.6-a2.4-d8.8 license"
 
 ## Exposed port
 
