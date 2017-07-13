@@ -1,4 +1,4 @@
-#! /bin/bash
+#!/bin/bash
 if [ -f /etc/php/${DWL_PHP_VERSION}/apache2/php.ini ]; then
     sudo sed -i "s|;date.timezone =|date.timezone = ${DWL_PHP_DATETIMEZONE}|g" /etc/php/${DWL_PHP_VERSION}/apache2/php.ini;
     # src: http://symfony.com/doc/current/performance.html

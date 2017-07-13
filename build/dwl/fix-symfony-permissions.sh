@@ -1,4 +1,4 @@
-#! /bin/bash
+#!/bin/bash
 
 if [ "${DWLC_USER_NAME}" == "" ]; then
     export DWLC_USER_NAME=${DWL_USER_NAME:-`whoami`};
