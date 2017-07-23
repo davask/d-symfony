@@ -38,5 +38,8 @@ echo ">> Apache2 initialized";
 . ${dwlDir}/php.sh
 echo ">> Php initialized";
 
+. ${dwlDir}/fix-symfony-permissions.sh
+echo ">> fix Symfony initialized";
+
 
 tail -f /dev/null;
