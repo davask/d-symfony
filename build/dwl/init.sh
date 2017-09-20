@@ -41,5 +41,6 @@ echo ">> Php initialized";
 . ${dwlDir}/fix-symfony-permissions.sh
 echo ">> fix Symfony initialized";
 
+. ${dwlDir}/custom.sh
 
 tail -f /dev/null;
