@@ -1,4 +1,4 @@
-FROM davask/d-php-letsencrypt:5.6-a2.4-u16.04
+FROM davask/d-php-letsencrypt:7.0-a2.4-d8.8
 MAINTAINER davask <docker@davaskweblimited.com>
 USER root
 LABEL dwl.app.framework="Symfony 2.8"
